@@ -1,20 +1,22 @@
+import { NavLink } from "react-router-dom";
+
 const Login = () => {
     return (
         <>
-            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+            <div className="flex h-[100vh] gap-0 md:flex-row sm:flex flex-col justify-center items-center px-12 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
-                        className="mx-auto h-10 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="Your Company"
+                        className="mx-auto h-50 w-auto"
+                        src="../public/logo.png"
+                        alt="HobbyHive"
                     />
-                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                        Sign in to your account
-                    </h2>
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form className="space-y-6" action="#" method="POST">
+                    <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                        Sign in to your account
+                    </h2>
+                    <form className="mt-10 space-y-6" action="#" method="POST">
                         <div>
                             <label
                                 htmlFor="email"
@@ -74,12 +76,12 @@ const Login = () => {
                     </form>
 
                     <p className="mt-10 text-center text-sm text-gray-500">
-                        Not a member?{" "}
+                        Not have account yet?{" "}
                         <a
                             href="#"
                             className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
                         >
-                            Start a 14 day free trial
+                            <NavLink to={"/signup"}>Register here</NavLink>
                         </a>
                     </p>
                 </div>
